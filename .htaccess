@@ -4,6 +4,11 @@ DirectoryIndex _landingPage/default.php default.php index.php default.html index
 
 RewriteEngine On
 
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*)$ $1.php [L,QSA]
