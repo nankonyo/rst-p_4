@@ -1,1 +1,1 @@
-500.php
+500 - internal server error.
