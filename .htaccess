@@ -9,6 +9,6 @@ RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*)$ $1.php [L,QSA]
 
 # Mengarahkan ke halaman error
-ErrorDocument 403 /errorPage/403.php
-ErrorDocument 404 /errorPage/404.php
-ErrorDocument 500 /errorPage/500.php
+ErrorDocument 403 /_errorPage/403.php
+ErrorDocument 404 /_errorPage/404.php
+ErrorDocument 500 /_errorPage/500.php
