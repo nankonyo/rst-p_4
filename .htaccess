@@ -1,0 +1,14 @@
+Options -Indexes
+
+DirectoryIndex _landingPage/default.php default.php index.php default.html index.html
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L,QSA]
+
+# Mengarahkan ke halaman error
+ErrorDocument 403 /errorPage/403.php
+ErrorDocument 404 /errorPage/404.php
+ErrorDocument 500 /errorPage/500.php
